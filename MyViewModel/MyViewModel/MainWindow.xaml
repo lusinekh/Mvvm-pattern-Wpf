@@ -20,18 +20,14 @@
 
         </Grid.ColumnDefinitions>
 
-
         <Grid.RowDefinitions>
 
+            <RowDefinition/>
 
             <RowDefinition/>
 
 
             <RowDefinition/>
-
-
-            <RowDefinition/>
-
 
             <RowDefinition/>
 
@@ -70,10 +66,6 @@
         <TextBlock Grid.Column="1" Grid.Row="2" Margin="5"
 
                    VerticalAlignment="Center" Text="{Binding Path=Numbers.Result}"/>
-
-
-
-       
 
             <Button Grid.Column="0" Grid.Row="3" Margin="5" 
 
