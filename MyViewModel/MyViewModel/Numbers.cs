@@ -19,8 +19,7 @@ namespace MyViewModel
             public static readonly DependencyProperty SecondNoProperty =
 
                 DependencyProperty.Register("SecondNo", typeof(int), typeof(Numbers));
-
-
+        
 
             public static readonly DependencyProperty ResultProperty =
 

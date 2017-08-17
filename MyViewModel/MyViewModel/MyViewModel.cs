@@ -17,14 +17,17 @@ namespace MyViewModel
         public event PropertyChangedEventHandler PropertyChanged;
         
         public MyViewModel1()
-
         {
-
             _numbers = new Numbers();
 
             CalculateGCDCommand = new MyCommand(CalculateGCD);
 
             CalculateLCMCommand = new MyCommand(CalculateLCM);
+
+            CalculateDivCommand = new MyCommand(CalculateDiv);
+
+            CalculateMullCommand = new MyCommand(CalculateMull);
+
 
         }
         
@@ -82,6 +85,40 @@ namespace MyViewModel
 
 
 
+        public ICommand CalculateMullCommand
+        {
+            get;set;
+        }
+
+
+
+        public ICommand CalculateDivCommand
+        {
+            get;set;
+        }
+
+
+        private int CalculateMull()
+        {
+            int x = Numbers.FirstNo;
+            int y = Numbers.SecondNo;
+            Numbers.Result = CalculateMulInternal(x, y);
+            Numbers.ResultLabel = "Mull";
+            return Numbers.Result;
+            
+        }
+
+
+        private int CalculateDiv()
+        {
+            int x = Numbers.FirstNo;
+            int y = Numbers.SecondNo;
+            Numbers.Result = CalculateDivInternal(x, y);
+            Numbers.ResultLabel = "Div";
+            return Numbers.Result;
+
+        }
+
         private int CalculateGCD()
 
         {
@@ -97,6 +134,28 @@ namespace MyViewModel
             return Numbers.Result;
 
         }
+
+
+        private int  CalculateMulInternal(int x,int y)
+        {
+            return x * y;
+
+        }
+
+        
+        private int CalculateDivInternal(int x,int y)
+
+        {
+            if (y == 0)
+                return 0;
+
+            return x / y;
+
+
+        }
+
+
+
         
         private int CalculateGCDInternal(int x, int y)
 
@@ -125,7 +184,6 @@ namespace MyViewModel
         }
         
         private int CalculateLCM()
-
         {
 
             int x = Numbers.FirstNo;
@@ -134,8 +192,6 @@ namespace MyViewModel
             
             int lcm = x * y / CalculateGCDInternal(x, y);
             
-
-
             Numbers.Result = lcm;
 
             Numbers.ResultLabel = "LCM";
