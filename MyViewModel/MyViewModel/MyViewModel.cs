@@ -50,15 +50,11 @@ namespace MyViewModel
             }
 
         }
-
-
+        
         private void RaisePropertyChanged(string propertyName)
 
         {
-
             PropertyChangedEventHandler handler = this.PropertyChanged;
-
-
 
             if (handler != null)
 
@@ -69,34 +65,27 @@ namespace MyViewModel
             }
 
         }
-
-
-
+        
         public ICommand CalculateGCDCommand
 
         { get; set; }
-
-
+        
 
         public ICommand CalculateLCMCommand
 
         { get; set; }
 
-
-
+        
         public ICommand CalculateMullCommand
         {
             get;set;
         }
-
-
-
+        
         public ICommand CalculateDivCommand
         {
             get;set;
         }
-
-
+        
         private int CalculateMull()
         {
             int x = Numbers.FirstNo;
@@ -106,8 +95,7 @@ namespace MyViewModel
             return Numbers.Result;
             
         }
-
-
+        
         private int CalculateDiv()
         {
             int x = Numbers.FirstNo;
