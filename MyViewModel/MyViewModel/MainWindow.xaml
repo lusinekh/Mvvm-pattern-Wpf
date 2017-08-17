@@ -86,9 +86,9 @@
 
         <Button Grid.Column="0" Grid.Row="4" Margin="5"
               
-              Content="Mul"  Command="{Binding   CalculateDivCommand}"/>
+              Content="Mul"  Command="{Binding   CalculateMullCommand}"/>
         <Button Grid.Column="1" Grid.Row="4" Margin="5"
-              Content="Div"  Command="{ Binding  CalculateMullCommand}"/>
+              Content="Div"  Command="{ Binding  CalculateDivCommand}"/>
 
     </Grid>
 
