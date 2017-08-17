@@ -7,9 +7,7 @@
         mc:Ignorable="d"
          Title="MVVM" Height="200" Width="300">
 
-
     <Grid Name="grid" Background="Wheat">
-
 
         <Grid.ColumnDefinitions>
 

@@ -14,17 +14,13 @@ namespace MyViewModel
         public Func<int> Function
 
         { get; set; }
-
-
-
+        
         public MyCommand()
 
         {
 
         }
-
-
-
+        
         public MyCommand(Func<int> function)
 
         {
@@ -32,9 +28,7 @@ namespace MyViewModel
             Function = function;
 
         }
-
-
-
+        
         public bool CanExecute(object parameter)
 
         {
@@ -46,17 +40,11 @@ namespace MyViewModel
                 return true;
 
             }
-
-
-
+            
             return false;
 
         }
-
-
-
-
-
+        
         public void Execute(object parameter)
 
         {
@@ -70,8 +58,7 @@ namespace MyViewModel
             }
 
         }
-
-
+        
 
         public event EventHandler CanExecuteChanged
 
