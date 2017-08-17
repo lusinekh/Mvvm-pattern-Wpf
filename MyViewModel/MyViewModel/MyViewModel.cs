@@ -11,11 +11,10 @@ namespace MyViewModel
     public class MyViewModel1 : INotifyPropertyChanged
 
     {
-
         private Numbers _numbers;
 
         public event PropertyChangedEventHandler PropertyChanged;
-        
+
         public MyViewModel1()
         {
             _numbers = new Numbers();
@@ -52,7 +51,7 @@ namespace MyViewModel
 
         }
 
-        
+
         private void RaisePropertyChanged(string propertyName)
 
         {
@@ -134,15 +133,11 @@ namespace MyViewModel
             return Numbers.Result;
 
         }
-
-
         private int  CalculateMulInternal(int x,int y)
         {
             return x * y;
 
         }
-
-        
         private int CalculateDivInternal(int x,int y)
 
         {
@@ -153,9 +148,6 @@ namespace MyViewModel
 
 
         }
-
-
-
         
         private int CalculateGCDInternal(int x, int y)
 
