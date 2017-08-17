@@ -68,6 +68,8 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="MyCommand.cs" />
+    <Compile Include="MyViewModel.cs" />
     <Compile Include="Numbers.cs" />
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>

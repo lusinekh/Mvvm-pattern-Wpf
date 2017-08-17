@@ -7,80 +7,74 @@ using System.Windows;
 
 namespace MyViewModel
 {
-    class Numbers : DependencyObject
-    {
-        public static readonly DependencyProperty FirstNoProperty =
+        public class Numbers : DependencyObject
 
-          DependencyProperty.Register("FirstNo", typeof(int), typeof(Numbers));
+        {
+            public static readonly DependencyProperty FirstNoProperty =
 
-  
-
-     public static readonly DependencyProperty SecondNoProperty =
-
-         DependencyProperty.Register("SecondNo", typeof(int), typeof(Numbers));
+                DependencyProperty.Register("FirstNo", typeof(int), typeof(Numbers));
 
 
 
-  public static readonly DependencyProperty ResultProperty =
+            public static readonly DependencyProperty SecondNoProperty =
 
-        DependencyProperty.Register("Result", typeof(int), typeof(Numbers));
+                DependencyProperty.Register("SecondNo", typeof(int), typeof(Numbers));
 
 
 
- public static readonly DependencyProperty ResultLabelProperty =
+            public static readonly DependencyProperty ResultProperty =
 
-       DependencyProperty.Register("ResultLabel", typeof(String), typeof(Numbers));
+                DependencyProperty.Register("Result", typeof(int), typeof(Numbers));
 
- 
 
-      public int FirstNo
 
-      { 
+            public static readonly DependencyProperty ResultLabelProperty =
 
-          get { return (int) GetValue(FirstNoProperty);
+                DependencyProperty.Register("ResultLabel", typeof(String), typeof(Numbers));
+        
+            public int FirstNo
+            {
+
+                get
+                {
+                    return (int)GetValue(FirstNoProperty);
+                }
+
+                set
+                {
+                    SetValue(FirstNoProperty, value);
+                }
+
+            }
+        
+            public int SecondNo
+
+            {
+
+                get { return (int)GetValue(SecondNoProperty); }
+
+                set { SetValue(SecondNoProperty, value); }
+
+            }
+        
+
+            public String ResultLabel
+
+            {
+
+                get { return (String)GetValue(ResultLabelProperty); }
+
+                set { SetValue(ResultLabelProperty, value); }
+
+            }
+        
+            public int Result
+            {
+                get { return (int)GetValue(ResultProperty); }
+
+                set { SetValue(ResultProperty, value); }
+
+            }
+        }
     }
 
-          set { SetValue(FirstNoProperty, value);
-}
-
-     }
-
-  
-
-      public int SecondNo
-
-      { 
-
-          get { return (int) GetValue(SecondNoProperty); }
-
-          set { SetValue(SecondNoProperty, value); }
-
-      }
-
-  
-
-      public String ResultLabel
-
-      { 
-
-         get { return (String) GetValue(ResultLabelProperty); }
-
-          set { SetValue(ResultLabelProperty, value); }
-
-     }
-
- 
-
-     public int Result
-
-    { 
-
-          get { return (int) GetValue(ResultProperty); }
-
-          set { SetValue(ResultProperty, value); }
-
-    }
-
-
-    }
-}
