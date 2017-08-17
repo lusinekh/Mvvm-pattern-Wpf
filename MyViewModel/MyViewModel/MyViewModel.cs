@@ -31,7 +31,6 @@ namespace MyViewModel
         public Numbers Numbers
 
         {
-
             get
 
             {
@@ -43,17 +42,14 @@ namespace MyViewModel
             set
 
             {
-
                 _numbers = value;
 
                 RaisePropertyChanged("Numbers");
-
             }
 
         }
 
-
-
+        
         private void RaisePropertyChanged(string propertyName)
 
         {
@@ -93,15 +89,11 @@ namespace MyViewModel
             int x = Numbers.FirstNo;
 
             int y = Numbers.SecondNo;
-
-
-
+            
             Numbers.Result = CalculateGCDInternal(x, y);
 
             Numbers.ResultLabel = "GCD";
-
-
-
+            
             return Numbers.Result;
 
         }
@@ -109,31 +101,27 @@ namespace MyViewModel
         private int CalculateGCDInternal(int x, int y)
 
         {
-
+            int a;
             if (x == 0)
 
-                return 0;
-
-
-
-            while (y != 0)
-
             {
-
-                if (x > y)
-
-                    x = x - y;
-
-                else
-
-                    y = y - x;
-
+                a= y;
+            }
+            else
+            if (y == 0)
+            {
+                a= x;
+            }
+            else
+            if (x > y)
+            {
+                a=x - y;
             }
 
+            else
+               a=y - x;
 
-
-            return x;
-
+            return a;
         }
         
         private int CalculateLCM()
@@ -143,11 +131,9 @@ namespace MyViewModel
             int x = Numbers.FirstNo;
 
             int y = Numbers.SecondNo;
-
-
-
+            
             int lcm = x * y / CalculateGCDInternal(x, y);
-
+            
 
 
             Numbers.Result = lcm;
@@ -157,7 +143,5 @@ namespace MyViewModel
             return lcm;
 
         }
-        
-
     }
 }

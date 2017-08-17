@@ -59,7 +59,6 @@ namespace MyViewModel
 
         }
         
-
         public event EventHandler CanExecuteChanged
 
         {

@@ -35,6 +35,9 @@
 
             <RowDefinition/>
 
+            <RowDefinition/>
+            
+            <RowDefinition/>
 
         </Grid.RowDefinitions>
 
@@ -69,14 +72,24 @@
                    VerticalAlignment="Center" Text="{Binding Path=Numbers.Result}"/>
 
 
-        <Button Grid.Column="0" Grid.Row="3" Margin="5" 
+
+       
+
+            <Button Grid.Column="0" Grid.Row="3" Margin="5" 
 
                  Content="GCD" Command="{Binding CalculateGCDCommand}"/>
 
 
-        <Button Grid.Column="1" Grid.Row="3" Margin="5" 
+            <Button Grid.Column="1" Grid.Row="3" Margin="5" 
 
               Content="LCM" Command="{Binding CalculateLCMCommand}"/>
+
+        <Button Grid.Column="0" Grid.Row="4" Margin="5"
+              
+              Content="Mul"/>
+        <Button Grid.Column="1" Grid.Row="4" Margin="5"
+              Content="Div"/>
+
 
 
     </Grid>
